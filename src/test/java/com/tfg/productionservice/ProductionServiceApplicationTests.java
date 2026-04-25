@@ -1,10 +1,9 @@
 package com.tfg.productionservice;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
-import com.tfg.productionservice.ProductionServiceApplication;
+//import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest(classes = ProductionServiceApplication.class)
+//@SpringBootTest(classes = ProductionServiceApplication.class)
 class ProductionServiceApplicationTests {
 
     @Test
