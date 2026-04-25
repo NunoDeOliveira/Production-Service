@@ -31,3 +31,10 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### AI Plugins & Tooling ###
+# Evita que se suban historiales de chat o configuraciones de IA
+.idea/ai_assistant.xml
+.idea/cody_history.json
+.idea/copilot/
+.idea/claude-dev/

@@ -1,8 +1,13 @@
 package com.tfg.productionservice.model;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 import java.time.LocalDateTime;
 
+
+@Getter
+@Setter
 @Entity
 @Table(name = "productions")
 public class Production {
@@ -39,45 +44,9 @@ public class Production {
         this.endTime = LocalDateTime.now();
     }
 
-    // Switch to REJECTED state
     public void reject() {
         this.state = ProductionState.REJECTED;
+        this.endTime = LocalDateTime.now();
     }
 
-    // Getters and setters
-    public Long getId() {
-        return id;
-    }
-
-    public int getAmount() {
-        return amount;
-    }
-
-    public void setAmount(int amount) {
-        this.amount = amount;
-    }
-
-    public ProductionState getState() {
-        return state;
-    }
-
-    public void setState(ProductionState state) {
-        this.state = state;
-    }
-
-    public LocalDateTime getStartTime() {
-        return startTime;
-    }
-
-    public void setStartTime(int amount, ProductionState state, LocalDateTime startTime) {
-        this.startTime = startTime;
-    }
-
-    public LocalDateTime getEndTime() {
-        return endTime;
-    }
-
-    public void setEndTime(LocalDateTime endTime) {
-        this.endTime = endTime;
-    }
 }

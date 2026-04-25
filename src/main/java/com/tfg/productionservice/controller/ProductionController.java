@@ -4,6 +4,8 @@ import com.tfg.productionservice.model.Production;
 import com.tfg.productionservice.service.ProductionService;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/productions")
 public class ProductionController {
@@ -19,21 +21,15 @@ public class ProductionController {
         return productionService.createProduction(amount);
     }
 
-    /*
-    @PostMapping("/{id}/start")
-    public Production startProduction(@PathVariable Long id) {
-        return productionService.startProduction(id);
-    }*/
-
-    /*
-    @PostMapping("/{id}/complete")
-    public Production completeProduction(@PathVariable Long id) {
-        return productionService.completeProduction(id);
-    }*/
-
     @GetMapping("/{id}")
     public Production getProduction(@PathVariable Long id) {
+
         return productionService.getProduction(id);
     }
 
+    @GetMapping
+    public List<Production> getAllProductions() {
+
+        return productionService.getAllProductions();
+    }
 }
